@@ -55,6 +55,9 @@
       fruites.count("apple") # 2
 
 
+TIP
+  -. arr.sort() 는 정순으로 배열을 만들지만 arr를 그대로 두고 싶다면. sorted_list = list(sort(arr)) 로 하면 sort는 지켜진다.
+  -. 배열에서 순서를 바꾸는 방법은 arr[i] , arr[i+1] = arr[i+1] , arr[i]으로 서로의 위치를 바꿀수 있다.
 
 
 
