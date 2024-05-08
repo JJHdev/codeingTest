@@ -64,12 +64,6 @@ TIP
   -. for i in range(종료값) or for i in range(시작값, 종료값) or for i , 변수값(answer) in enumerater(answers)
   -. pattern[ i % len(pattenr)] 에서 i가 0일 경우 0을 반환한다.
   -. max_score = max(scores)
-
-
-
-
-
-
-
-
-
+  -. ret = [[0]*열 for _ in range(행)]
+  -. result = sorted(fails , key = lambda x : fails[x], reverse =True)
+  -. 딕셔너리로 값 정렬하기. sorted_strings = sorted(fails, key=lambda x: fails[x], reverse=True)로 기준정렬을 다른 방식으로 바꿀수 있다. ( lambda x : fails[x]) 는 각 키를 순차적으로 진행한다.
