@@ -15,6 +15,5 @@
 7. 실제로 구현중 나온 내용
   -. decimal //= 2 >>>>>>>> deciaml을 2로 나누고 나온 값을 decimal에 재할당
   -. while stack:
-        binary += stack.pop()
-    은 후입 선출이다.
+        binary += stack.pop() 은 후입 선출이다.
 
