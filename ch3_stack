@@ -17,6 +17,22 @@
   -. while stack:
         binary += stack.pop() 은 후입 선출이다.
 
+8. 
+def solution(s):
+  answer = 0
+  n = len(s)
+  for i in range(n):
+    stack = []
+    for j in range(n):
+      c = s[( I + J) % n]
+    if c == "(" or c == "{" or c == "[":
+      stack.append(c)
+    else:
+      if not stack:
+        break
+
+위와 같은 구조는 s에 대해서  0 - 0 , 0 - 1, 0 -2 , 1 - 0, 1 - 1, 1 - 2 같은 구조로 돌아간다. 
+
 
 
 
