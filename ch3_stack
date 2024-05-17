@@ -17,3 +17,6 @@
   -. while stack:
         binary += stack.pop() 은 후입 선출이다.
 
+
+
+
