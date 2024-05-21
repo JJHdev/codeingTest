@@ -34,5 +34,19 @@ def solution(s):
 위와 같은 구조는 s에 대해서  0 - 0 , 0 - 1, 0 -2 , 1 - 0, 1 - 1, 1 - 2 같은 구조로 돌아간다. 
 
 
+def solution(board, move):
+  lens = [[] for _ in range(len(board[0]))]
+
+  for i in range(len(board) -1 , -1 , -1 )
+    for j in range(len(board[0])):
+      if board[i][j]:
+        lens[j].append(board[i][j])
+
+2차원 배열에서 역순으로 각 첫번째 열을 1행으로 저장하는 알고리즘
 
 
+
+
+
+
+    
