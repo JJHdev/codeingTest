@@ -86,8 +86,24 @@ def solution(progresses, speeds):
 
   return answer
 
+9. 카드뭉치
+from collections import deque
 
+def solution(cards1 , cards2 , goal):
+  queue1 = deque(cards1)
+  queue2 = deque(cards2)
+  goal   = deque(goal)
 
+while goal:
+  if queue1 and queue1[0] == goal[o]:
+    goal.leftpop()
+    queue1.leftpop()
+  elif queue2 and queue2[0] == goal[0]:
+    goal.leftpop()
+    queue2.leftpop()
+  else:
+    break
+return "YES" if not goal else "NO"
 
 
 
