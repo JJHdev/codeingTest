@@ -53,6 +53,41 @@
 6. pop(0)과 popleft()의 성능 비교하기
   -. 10만 개의 데이터를 각각 연산한다면 100배 정도로 시간차이가 날정도로 popleft()가 성능면에서 우월하다.
 
+7. 마지막 남은 사람 구하기.
+from collections import deque
+def solution(N,K):
+  queue = deque(range(1, N+1))
+  while len(queue) > 1:
+    for _ in range(K -1):
+      queue.append(queue.leftpop())
+    queue.popleft()
+  return queue[0]
+
+8. 작업진행속도에 따른 완료예정일
+
+import math
+
+def solution(progresses, speeds):
+    answer = []
+    n = len(progresses)
+
+    day_left = [math.ceil((100 - progresses[i]) / speeds[i]) for i in range(n)]
+    count = 1
+    max_day = day_left[0]
+
+    for i in range(1, n):
+        if day_left[i] <= max_day:
+            count += 1
+        else:
+            answer.append(count)
+            max_day = day_left[i]
+            count = 1  # Reset count to 1 for the new feature being deployed
+    answer.append(count)  # Append the last count
+
+  return answer
+
+
+
 
 
 
