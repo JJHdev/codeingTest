@@ -6,3 +6,51 @@
   -. 해시 함수가 변환한 값은 인덱스이므로 해시테이블의 크기를 넘어서면 안된다.
   -. 해시 함수가 변환한 값의 충돌은 최대한 적게 발생해야 한다. 충돌의 의미는 서로 다른 서로 다른 두 키에 대해 해싱 함수를 적용한 결과가 돌이한 것을 의미 한다.
 
+
+5. 두수 합이 target인 수 찾기 
+  -. tip : a+b = target 이면  target - b = a 로 해서 a가 해쉬테이블에 있는지 찾기!
+  -. hashtable에는 K이하 자연수 1~ K까지 모든수를 넣고 넘어온 배열은 값을 1로 해서 키핑하기 
+def count_sort(arr, k):
+  hashtable = [0] * (k+1)
+
+  for num in arr:
+    if num <= k:
+      hashtable[num] = 1
+  return hashtable
+
+def solution(arr, target):
+  hashtable = count_sort(arr , target)
+
+  for num in arr:
+    complemnet = target - num
+    if (
+      complement != num
+      and complement >= 0 
+      and complemnet <= target
+      and hashtable[complement] == 1
+    )
+    return true 
+  return false
+
+
+6. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
