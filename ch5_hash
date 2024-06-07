@@ -55,8 +55,43 @@ def solution(string_list, query_list):
           result.append(False)
   return result
 
+7. 참가자와 우승자 list를 받아 처리하기.
+def solution(participant , completion)
+  dic = {}
+
+  for d in participant:
+    dic[d] = 1
+
+  for c in completion:
+    dic [c] -= 1
+
+  for key in dic.key():
+    if dic[key] == 1:
+      return key
 
 
+>>>> 동명이인 처리를 하지않아 오류가 발생하여 
+
+def solution(participant, completion):
+    dic = {}
+
+    # 참가자 이름을 딕셔너리에 추가하면서 중복 카운트
+    for d in participant:
+        if d in dic:
+            dic[d] += 1
+        else:
+            dic[d] = 1
+
+    # 완주한 참가자의 카운트 감소
+    for c in completion:
+        dic[c] -= 1
+
+    # 완주하지 못한 참가자 찾기
+    for key in dic.keys():
+        if dic[key] > 0:
+            return key
+
+으로 고치는게 맞다.
 
 
 
